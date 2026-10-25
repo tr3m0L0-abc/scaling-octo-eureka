@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Инго Автошколы — маркетплейс автошкол от Ингосстраха</title>
+  <meta name="description" content="Сравните автошколы Москвы и области по цене, расписанию и проценту сдачи. Цены напрямую от автошкол, без наценки. Билеты ПДД 2026 и страхование для начинающих водителей.">
+  <meta name="theme-color" content="#0a2453">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%231a5cff'/%3E%3Cpath d='M14 31 18.5 9h3L26 31' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#app">К содержимому</a>
+
+  <header class="header" id="header">
+    <div class="container header__in">
+      <a href="#/" class="logo" aria-label="Инго Автошколы — на главную">
+        <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a5cff"/><stop offset="1" stop-color="#0a2453"/></linearGradient></defs>
+          <rect width="40" height="40" rx="11" fill="url(#logoGrad)"/>
+          <path d="M13.5 31 18.5 9h3l5 22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M20 13.5v2.5M20 19.5v3M20 26.5v3" stroke="#ff8a3d" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <span class="logo__text"><b>Инго</b> Автошколы<small>от Ингосстраха</small></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#/schools" data-match="/schools /school/ /tariffs /tariff/ /checkout">Найти автошколу</a>
+        <a href="#/pdd" data-match="/pdd">Билеты ПДД</a>
+        <a href="#/insurance" data-match="/insurance">Страхование</a>
+        <a href="#/materials" data-match="/materials">Полезное</a>
+        <a href="#/faq" data-match="/faq">Вопросы</a>
+      </nav>
+      <div class="header__act">
+        <a href="#/compare" class="hbtn" data-match="/compare" aria-label="Сравнение"><i data-ic="compare"></i><span>Сравнение</span><b class="count" id="cmpCount" hidden>0</b></a>
+        <a href="#/auth" class="hbtn" id="hdrUser"><i data-ic="user"></i><span>Войти</span></a>
+        <button class="hbtn burger" data-action="nav-toggle" aria-label="Меню" aria-expanded="false"><i data-ic="menu"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="footer">
+    <div class="container footer__in">
+      <div class="footer__brand">
+        <a href="#/" class="logo logo--light">
+          <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#1a5cff"/><path d="M13.5 31 18.5 9h3l5 22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 13.5v2.5M20 19.5v3M20 26.5v3" stroke="#ff8a3d" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <span class="logo__text"><b>Инго</b> Автошколы<small>от Ингосстраха</small></span>
+        </a>
+        <p>Продаём не сертификаты, а качественное обучение. Цены напрямую от автошкол — без наценки.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Разделы</h4>
+        <a href="#/schools">Найти автошколу</a>
+        <a href="#/tariffs">Тарифы</a>
+        <a href="#/pdd">Билеты ПДД 2026</a>
+        <a href="#/insurance">Страхование</a>
+        <a href="#/materials">Полезные материалы</a>
+      </div>
+      <div class="footer__col">
+        <h4>Помощь</h4>
+        <a href="#/faq">Частые вопросы</a>
+        <a href="#/materials/guide">Как получить права</a>
+        <button class="linkish" data-action="chat-open">Чат поддержки</button>
+        <a href="#/account">Личный кабинет</a>
+      </div>
+      <div class="footer__col">
+        <h4>Ингосстрах</h4>
+        <a href="https://www.ingos.ru/" target="_blank" rel="noopener">Официальный сайт ↗</a>
+        <a href="#/insurance">Автострахование</a>
+        <a href="#/insurance?cat=life">Страхование жизни</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 Инго Автошколы</span>
+      <span>Демо-версия: автошколы, цены, отзывы и оплата — тестовые.</span>
+    </div>
+  </footer>
+
+  <div id="compareBar" class="cmpbar" hidden></div>
+  <div id="chat"></div>
+  <div id="toast" class="toasts" aria-live="polite"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/pdd.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
